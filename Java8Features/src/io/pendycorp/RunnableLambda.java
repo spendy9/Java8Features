@@ -19,7 +19,7 @@ public class RunnableLambda {
 		/*
 		 * Creating a new Thread and passing it an instance of runnable
 		 */
-		Thread myThread = new Thread(new Runnable() {
+		Thread myThread1 = new Thread(new Runnable() {
 			
 			@Override
 			public void run() {
@@ -28,14 +28,12 @@ public class RunnableLambda {
 			}
 		});
 		
+		myThread1.run();
 		
 		/*
 		 * Lambda expression to implement Runnable
 		 */
 		Thread myThread2 = new Thread(() -> System.out.println("Printed inside Lambda Runnable"));
-		
-		
-		myThread.run();
 		
 		myThread2.run();
 	}
